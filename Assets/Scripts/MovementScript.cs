@@ -1,17 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CornManager : MonoBehaviour
+public class MovementScript : MonoBehaviour
 {
-
     [SerializeField] float movementSpeed;
-
-
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     public void Update()
@@ -22,5 +13,13 @@ public class CornManager : MonoBehaviour
     void MoveGameObject()
     {
         transform.Translate(Vector3.right * movementSpeed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("endPoint"))
+        {
+            Destroy(gameObject);
+        }
     }
 };
