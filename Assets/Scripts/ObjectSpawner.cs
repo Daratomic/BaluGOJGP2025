@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class CornSpawner : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> corn; // List of corn prefabs that will be spawned
     [SerializeField] private List<GameObject> turtles; // List of turtle prefabs that will be spawned
-    [SerializeField] private List<GameObject> spawnPoints;
+    [SerializeField] private List<GameObject> spawnPoint;
     [SerializeField] private int timeBetweenSpawns; // Time it takes for each object to spawn
     
     // Do NOT touch these in inspector
-    public List<GameObject> cornsInGame; // List of corn prefabs currently in game
     public List<GameObject> turtlesInGame; // List of turtles currently in game
 
     // Update is called once per frame
@@ -28,20 +26,10 @@ public class CornSpawner : MonoBehaviour
         turtlesInGame.Add(turtleInGame); // Add turtle to the list of turtles in game
     }
 
-    void SpawnCorn()
-    {
-        // Same as before but with Corn
-        int cornNumber = Random.Range(0, corn.Count);
-        GameObject corns = corn[cornNumber]; 
-        
-        GameObject cornInGame = Instantiate(corns, RandomSpawnPoint().position, Quaternion.identity);
-        cornsInGame.Add(cornInGame);
-    }
-
     Transform RandomSpawnPoint()
     {
-        int spawnPointNumber = Random.Range(0, spawnPoints.Count);
-        GameObject spawnPointObj = spawnPoints[spawnPointNumber];
+        int spawnPointNumber = Random.Range(0, spawnPoint.Count);
+        GameObject spawnPointObj = spawnPoint[spawnPointNumber];
         return spawnPointObj.transform;
     }
 
@@ -49,22 +37,16 @@ public class CornSpawner : MonoBehaviour
     {
         SpawnTurtle();
         yield return new WaitForSeconds(timeBetweenSpawns);
-        SpawnCorn();
-        yield return new WaitForSeconds(timeBetweenSpawns);
         SpawnTurtle();
         yield return new WaitForSeconds(timeBetweenSpawns);
-        SpawnCorn();
-        yield return new WaitForSeconds(timeBetweenSpawns);
         SpawnTurtle();
-        yield return new WaitForSeconds(timeBetweenSpawns);
-        SpawnCorn();
         yield return new WaitForSeconds(timeBetweenSpawns);
         StartCoroutine(Spawner());
     }
 
     IEnumerator BeginSpawner()
     {
-        yield return new WaitForSeconds(2.3f);
+        yield return new WaitForSeconds(4f);
         StartCoroutine(Spawner());
     }
 }
