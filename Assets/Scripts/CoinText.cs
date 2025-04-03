@@ -1,20 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class ObjectDestroyer : MonoBehaviour
+public class CoinText : MonoBehaviour
 {
-    public GameObject turtles;
+    public TMP_Text CoinString;
+    private int Coins;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
-    void OnMouseDown()
+    void Update()
     {
-        CoinManager.CoinTally++;
-        GameObject.Destroy(turtles);
+        Coins = CoinManager.CoinTally;
+        CoinString.text = Coins.ToString();
     }
 }
