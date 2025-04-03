@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MovementScript : MonoBehaviour
+public class TurtleManager : MonoBehaviour
 {
     [SerializeField] float movementSpeed;
 
@@ -19,7 +19,7 @@ public class MovementScript : MonoBehaviour
     {
         if(collision.CompareTag("endPoint"))
         {
-            ObjectPooler.PutBack(this.gameObject);
+            Destroy(gameObject);
         }
     }
 };

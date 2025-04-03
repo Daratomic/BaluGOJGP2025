@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CornSpawner : MonoBehaviour
+public class ObjectSpawner : MonoBehaviour
 {
     [SerializeField] private List<GameObject> turtles; // List of turtle prefabs that will be spawned
-    [SerializeField] private Vector2 spawnPoint;
+    [SerializeField] private List<GameObject> spawnPoints;
     [SerializeField] private int timeBetweenSpawns; // Time it takes for each object to spawn
     
     // Do NOT touch these in inspector
@@ -14,26 +14,23 @@ public class CornSpawner : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        for (int i = 0; i < 10; i++)
-        {
-            int turtleNumber = Random.Range(0, turtles.Count);
-            GameObject turtle = Instantiate(turtles[turtleNumber]);
-            ObjectPooler.AddToPool(turtle);
-        }
         StartCoroutine(BeginSpawner());
     }
 
     void SpawnTurtle()
     {
-        GameObject SpawnsTurtle;
-        SpawnsTurtle = ObjectPooler.Get();
+        int turtleNumber = Random.Range(0, turtles.Count); // Choose random turtle from list
+        GameObject turtleObject = turtles[turtleNumber];
+        GameObject turtleList = Instantiate(turtleObject, RandomSpawnPoint().position, Quaternion.identity);
+        turtlesInGame.Add(turtleList);
+    }
 
-        if (SpawnsTurtle == null)
-        {
-            return;
-        }
-        SpawnsTurtle.SetActive(true);
-        turtlesInGame.Add(SpawnsTurtle);
+    Transform RandomSpawnPoint()
+    {
+        // Random spawn point from list (This is to get it working. This will be refined)
+        int spawnPointNumber = Random.Range(0, spawnPoints.Count);
+        GameObject spawnPoint = spawnPoints[spawnPointNumber];
+        return spawnPoint.transform;
     }
 
     IEnumerator Spawner()
