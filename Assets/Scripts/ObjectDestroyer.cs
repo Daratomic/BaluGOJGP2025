@@ -1,20 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using System.Timers;
 using UnityEngine;
 
 public class ObjectDestroyer : MonoBehaviour
 {
     public GameObject turtles;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
+    public int CoinsChance;
     void OnMouseDown()
     {
-        CoinManager.CoinTally++;
+        CoinsChance = Random.Range(1, 101);
+        if (CoinsChance > 95)
+        {
+            CoinManager.CoinTally += 10;
+        }
+        else
+        {
+            CoinManager.CoinTally += 5;
+        }
         GameObject.Destroy(turtles);
     }
 }
