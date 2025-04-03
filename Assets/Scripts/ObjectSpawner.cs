@@ -5,7 +5,7 @@ using UnityEngine;
 public class CornSpawner : MonoBehaviour
 {
     [SerializeField] private List<GameObject> turtles; // List of turtle prefabs that will be spawned
-    [SerializeField] private List<GameObject> spawnPoint;
+    [SerializeField] private Vector2 spawnPoint;
     [SerializeField] private int timeBetweenSpawns; // Time it takes for each object to spawn
     
     // Do NOT touch these in inspector
@@ -14,34 +14,35 @@ public class CornSpawner : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
+        for (int i = 0; i < 10; i++)
+        {
+            int turtleNumber = Random.Range(0, turtles.Count);
+            GameObject turtle = Instantiate(turtles[turtleNumber]);
+            ObjectPooler.AddToPool(turtle);
+        }
         StartCoroutine(BeginSpawner());
     }
 
     void SpawnTurtle()
     {
-        int turtleNumber = Random.Range(0, turtles.Count); // Chooses random turtle to spawn
-        GameObject turtle = turtles[turtleNumber];
-        
-        GameObject turtleInGame = Instantiate(turtle, RandomSpawnPoint().position, Quaternion.identity); // Spawns Object at random point
-        turtlesInGame.Add(turtleInGame); // Add turtle to the list of turtles in game
-    }
+        GameObject SpawnsTurtle;
+        SpawnsTurtle = ObjectPooler.Get();
 
-    Transform RandomSpawnPoint()
-    {
-        int spawnPointNumber = Random.Range(0, spawnPoint.Count);
-        GameObject spawnPointObj = spawnPoint[spawnPointNumber];
-        return spawnPointObj.transform;
+        if (SpawnsTurtle == null)
+        {
+            return;
+        }
+        SpawnsTurtle.SetActive(true);
+        turtlesInGame.Add(SpawnsTurtle);
     }
 
     IEnumerator Spawner()
     {
-        SpawnTurtle();
-        yield return new WaitForSeconds(timeBetweenSpawns);
-        SpawnTurtle();
-        yield return new WaitForSeconds(timeBetweenSpawns);
-        SpawnTurtle();
-        yield return new WaitForSeconds(timeBetweenSpawns);
-        StartCoroutine(Spawner());
+        while (true)
+        {
+            SpawnTurtle();
+            yield return new WaitForSeconds(timeBetweenSpawns);
+        }
     }
 
     IEnumerator BeginSpawner()

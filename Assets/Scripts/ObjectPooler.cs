@@ -4,50 +4,30 @@ using UnityEngine;
 
 public static class ObjectPooler
 {
-    public static Dictionary<string, Component> PoolLookup = new Dictionary<string, Component>();
-    public static Dictionary<string, Queue<Component>> PoolDictionary = new Dictionary<string, Queue<Component>>();
-
-    public static void EnqueueObject<T>(T item, string name) where T : Component
+   static List<GameObject> Pool = new List<GameObject>();
+    public static void AddToPool(GameObject item)
     {
-        if (!item.gameObject.activeSelf)
+        Pool.Add(item);
+    }
+
+    public static GameObject Get()
+    {
+        GameObject ToReturn = null;
+        if(Pool.Count > 0)
         {
-            return;
+            ToReturn = Pool[0];
+            Pool.RemoveAt(0);
         }
 
-        item.transform.position = Vector2.zero;
-        PoolDictionary[name].Enqueue(item);
-        item.gameObject.SetActive(false);
+        return ToReturn;
     }
 
-    public static T DequeueObject<T>(string key) where T : Component
+    public static void PutBack(GameObject Item)
     {
-        if (PoolDictionary[key].TryDequeue(out var item))
-        {
-            return (T)item;
-        }
+        Item.SetActive(false);
+        Item.transform.position = new Vector3(2000,0,0);
 
-        return (T)EnqueueNewInstance(PoolLookup[key], key);
+        AddToPool(Item);
     }
 
-    public static T EnqueueNewInstance<T>(T item, string key) where T : Component
-    {
-        T newInstance = Object.Instantiate(item);
-        newInstance.gameObject.SetActive(false);
-        newInstance.transform.position = Vector2.zero;
-        PoolDictionary[key].Enqueue(newInstance);
-        return newInstance;
-    }
-
-    public static void SetupPool<T>(T pooledItemPrefab, int poolSize, string dictionaryEntry) where T : Component
-    {
-        PoolDictionary.Add(dictionaryEntry, new Queue<Component>());
-        PoolLookup.Add(dictionaryEntry, pooledItemPrefab);
-        
-        for (int i = 0; i < poolSize; i++)
-        {
-            T pooledInstance = Object.Instantiate(pooledItemPrefab);
-            pooledInstance.gameObject.SetActive(false);
-            PoolDictionary[dictionaryEntry].Enqueue(pooledInstance);
-        }
-    }
 }
