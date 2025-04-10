@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2431705761940432545}
   - component: {fileID: 4535408182813204759}
   - component: {fileID: 8668661002128496911}
+  - component: {fileID: 8647045370158986861}
   m_Layer: 0
   m_Name: Turtle
   m_TagString: Untagged
@@ -177,3 +178,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &8647045370158986861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4023025453477304527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c1a3b0841ba03040848b9007d2e3373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turtles: {fileID: 4023025453477304527}
+  colourName: Purple
