@@ -48,7 +48,6 @@ public class ObjectSpawner : MonoBehaviour
         while (true)
         {
             SpawnTurtle();
-            SpawnCorns();
             yield return new WaitForSeconds(timeBetweenSpawns);
         }
     }
