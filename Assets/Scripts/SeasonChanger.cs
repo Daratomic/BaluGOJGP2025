@@ -13,6 +13,7 @@ public class SeasonChanger : MonoBehaviour
     private Color Winter = new Color(0.95f, 0.94f, 0.91f);
     private SpriteRenderer topRenderer;
     private SpriteRenderer bottomRenderer;
+    public ParticleSystem rainSystem;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,15 +21,20 @@ public class SeasonChanger : MonoBehaviour
         bottomRenderer = GrassBottom.GetComponent<SpriteRenderer>();
         topRenderer.color = Spring;
         bottomRenderer.color = Spring;
+        var emission = rainSystem.emission;
+        emission.enabled = true;
         StartCoroutine(SeasonCoroutine());
     }
 
     // Update is called once per frame
     IEnumerator SeasonCoroutine()
     {
-        while(true)
+        var emission = rainSystem.emission;
+        while (true)
         {
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(5);
+            emission.enabled = false;
+            yield return new WaitForSeconds(5);
             topRenderer.color = Summer;
             bottomRenderer.color = Summer;
             yield return new WaitForSeconds(10);
@@ -40,6 +46,7 @@ public class SeasonChanger : MonoBehaviour
             yield return new WaitForSeconds(10);
             topRenderer.color = Spring;
             bottomRenderer.color = Spring;
+            emission.enabled = true;
         }
     }
 }
