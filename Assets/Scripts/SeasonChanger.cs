@@ -14,6 +14,8 @@ public class SeasonChanger : MonoBehaviour
     private SpriteRenderer topRenderer;
     private SpriteRenderer bottomRenderer;
     public ParticleSystem rainSystem;
+    public ParticleSystem fogSystem;
+    public ParticleSystem snowSystem;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,32 +23,44 @@ public class SeasonChanger : MonoBehaviour
         bottomRenderer = GrassBottom.GetComponent<SpriteRenderer>();
         topRenderer.color = Spring;
         bottomRenderer.color = Spring;
-        var emission = rainSystem.emission;
-        emission.enabled = true;
+        var rainEmission = rainSystem.emission;
+        rainEmission.enabled = true;
+        var fogEmission = fogSystem.emission;
+        fogEmission.enabled = false;
+        var snowEmission = snowSystem.emission;
+        snowEmission.enabled = false;
         StartCoroutine(SeasonCoroutine());
     }
 
     // Update is called once per frame
     IEnumerator SeasonCoroutine()
     {
-        var emission = rainSystem.emission;
+        var rainEmission = rainSystem.emission;
+        var fogEmission = fogSystem.emission;
+        var snowEmission = snowSystem.emission;
         while (true)
         {
             yield return new WaitForSeconds(5);
-            emission.enabled = false;
+            rainEmission.enabled = false;
             yield return new WaitForSeconds(5);
             topRenderer.color = Summer;
             bottomRenderer.color = Summer;
             yield return new WaitForSeconds(10);
             topRenderer.color = Autumn;
             bottomRenderer.color = Autumn;
-            yield return new WaitForSeconds(10);
+            fogEmission.enabled = true;
+            yield return new WaitForSeconds(5);
+            fogEmission.enabled = false;
+            yield return new WaitForSeconds(5);
             topRenderer.color = Winter;
             bottomRenderer.color = Winter;
-            yield return new WaitForSeconds(10);
+            snowEmission.enabled = true;
+            yield return new WaitForSeconds(5);
+            snowEmission.enabled = false;
+            yield return new WaitForSeconds(5);
             topRenderer.color = Spring;
             bottomRenderer.color = Spring;
-            emission.enabled = true;
+            rainEmission.enabled = true;
         }
     }
 }
