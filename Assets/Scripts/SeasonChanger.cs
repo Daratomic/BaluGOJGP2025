@@ -14,7 +14,8 @@ public class SeasonChanger : MonoBehaviour
     private SpriteRenderer topRenderer;
     private SpriteRenderer bottomRenderer;
     public ParticleSystem rainSystem;
-    public ParticleSystem fogSystem;
+    public GameObject Fog;
+    private SpriteRenderer fogRenderer;
     public ParticleSystem snowSystem;
     // Start is called before the first frame update
     void Start()
@@ -25,8 +26,8 @@ public class SeasonChanger : MonoBehaviour
         bottomRenderer.color = Spring;
         var rainEmission = rainSystem.emission;
         rainEmission.enabled = true;
-        var fogEmission = fogSystem.emission;
-        fogEmission.enabled = false;
+        fogRenderer = Fog.GetComponent<SpriteRenderer>();
+        fogRenderer.enabled = false;
         var snowEmission = snowSystem.emission;
         snowEmission.enabled = false;
         StartCoroutine(SeasonCoroutine());
@@ -36,7 +37,7 @@ public class SeasonChanger : MonoBehaviour
     IEnumerator SeasonCoroutine()
     {
         var rainEmission = rainSystem.emission;
-        var fogEmission = fogSystem.emission;
+        fogRenderer = Fog.GetComponent<SpriteRenderer>();
         var snowEmission = snowSystem.emission;
         while (true)
         {
@@ -48,9 +49,9 @@ public class SeasonChanger : MonoBehaviour
             yield return new WaitForSeconds(10);
             topRenderer.color = Autumn;
             bottomRenderer.color = Autumn;
-            fogEmission.enabled = true;
+            fogRenderer.enabled = true;
             yield return new WaitForSeconds(5);
-            fogEmission.enabled = false;
+            fogRenderer.enabled = false;
             yield return new WaitForSeconds(5);
             topRenderer.color = Winter;
             bottomRenderer.color = Winter;
