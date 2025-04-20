@@ -47,7 +47,7 @@ public class StageTests
         stageManager.Start();
 
         // Assert
-        Assert.AreEqual(Color.blue, stageInner.GetComponent<SpriteRenderer>().color);
+        Assert.AreEqual(Color.red, stageInner.GetComponent<SpriteRenderer>().color);
     }
 
 

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<test-run id="2" testcasecount="4" result="Failed(Child)" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2025-04-20 14:29:25Z" end-time="2025-04-20 14:29:25Z" duration="0.0424117">
-  <test-suite type="TestSuite" id="1011" name="Balu - God of Joy (Group Project 2025)" fullname="Balu - God of Joy (Group Project 2025)" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2025-04-20 14:29:25Z" end-time="2025-04-20 14:29:25Z" duration="0.042412" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+<test-run id="2" testcasecount="4" result="Failed(Child)" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2025-04-20 14:42:14Z" end-time="2025-04-20 14:42:14Z" duration="0.0408063">
+  <test-suite type="TestSuite" id="1011" name="Balu - God of Joy (Group Project 2025)" fullname="Balu - God of Joy (Group Project 2025)" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2025-04-20 14:42:14Z" end-time="2025-04-20 14:42:14Z" duration="0.040806" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
     <properties />
     <failure>
       <message><![CDATA[One or more child tests had errors]]></message>
     </failure>
-    <test-suite type="Assembly" id="1017" name="StageTests.dll" fullname="D:/Unity/BaluGOJGP2025/Library/ScriptAssemblies/StageTests.dll" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2025-04-20 14:29:25Z" end-time="2025-04-20 14:29:25Z" duration="0.031679" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <test-suite type="Assembly" id="1017" name="StageTests.dll" fullname="D:/Unity/BaluGOJGP2025/Library/ScriptAssemblies/StageTests.dll" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2025-04-20 14:42:14Z" end-time="2025-04-20 14:42:14Z" duration="0.030533" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
       <properties>
-        <property name="_PID" value="27760" />
+        <property name="_PID" value="25936" />
         <property name="_APPDOMAIN" value="Unity Child Domain" />
         <property name="platform" value="EditMode" />
       </properties>
       <failure>
         <message><![CDATA[One or more child tests had errors]]></message>
       </failure>
-      <test-suite type="TestFixture" id="1012" name="StageTests" fullname="StageTests" classname="StageTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2025-04-20 14:29:25Z" end-time="2025-04-20 14:29:25Z" duration="0.030777" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestFixture" id="1012" name="StageTests" fullname="StageTests" classname="StageTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2025-04-20 14:42:14Z" end-time="2025-04-20 14:42:14Z" duration="0.029706" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
         <properties />
         <failure>
           <message><![CDATA[One or more child tests had errors]]></message>
         </failure>
-        <test-case id="1015" name="CreateStage_ShouldInstantiateStageTileAndSetProperties" fullname="StageTests.CreateStage_ShouldInstantiateStageTileAndSetProperties" methodname="CreateStage_ShouldInstantiateStageTileAndSetProperties" classname="StageTests" runstate="Runnable" seed="581123388" result="Failed" start-time="2025-04-20 14:29:25Z" end-time="2025-04-20 14:29:25Z" duration="0.011684" asserts="0">
+        <test-case id="1015" name="CreateStage_ShouldInstantiateStageTileAndSetProperties" fullname="StageTests.CreateStage_ShouldInstantiateStageTileAndSetProperties" methodname="CreateStage_ShouldInstantiateStageTileAndSetProperties" classname="StageTests" runstate="Runnable" seed="1008205759" result="Failed" start-time="2025-04-20 14:42:14Z" end-time="2025-04-20 14:42:14Z" duration="0.011054" asserts="0">
           <properties />
           <failure>
             <message><![CDATA[  Expected: RGBA(0.000, 0.000, 1.000, 1.000)
@@ -29,13 +29,13 @@
 ]]></stack-trace>
           </failure>
         </test-case>
-        <test-case id="1016" name="GetStageInner_ShouldReturnStageInner" fullname="StageTests.GetStageInner_ShouldReturnStageInner" methodname="GetStageInner_ShouldReturnStageInner" classname="StageTests" runstate="Runnable" seed="979122514" result="Passed" start-time="2025-04-20 14:29:25Z" end-time="2025-04-20 14:29:25Z" duration="0.002424" asserts="0">
+        <test-case id="1016" name="GetStageInner_ShouldReturnStageInner" fullname="StageTests.GetStageInner_ShouldReturnStageInner" methodname="GetStageInner_ShouldReturnStageInner" classname="StageTests" runstate="Runnable" seed="1735523362" result="Passed" start-time="2025-04-20 14:42:14Z" end-time="2025-04-20 14:42:14Z" duration="0.002224" asserts="0">
           <properties />
         </test-case>
-        <test-case id="1013" name="StageTestsSimplePasses" fullname="StageTests.StageTestsSimplePasses" methodname="StageTestsSimplePasses" classname="StageTests" runstate="Runnable" seed="1598644207" result="Passed" start-time="2025-04-20 14:29:25Z" end-time="2025-04-20 14:29:25Z" duration="0.000124" asserts="0">
+        <test-case id="1013" name="StageTestsSimplePasses" fullname="StageTests.StageTestsSimplePasses" methodname="StageTestsSimplePasses" classname="StageTests" runstate="Runnable" seed="1404235008" result="Passed" start-time="2025-04-20 14:42:14Z" end-time="2025-04-20 14:42:14Z" duration="0.000109" asserts="0">
           <properties />
         </test-case>
-        <test-case id="1014" name="StageTestsWithEnumeratorPasses" fullname="StageTests.StageTestsWithEnumeratorPasses" methodname="StageTestsWithEnumeratorPasses" classname="StageTests" runstate="Runnable" seed="967231104" result="Passed" start-time="2025-04-20 14:29:25Z" end-time="2025-04-20 14:29:25Z" duration="0.008537" asserts="0">
+        <test-case id="1014" name="StageTestsWithEnumeratorPasses" fullname="StageTests.StageTestsWithEnumeratorPasses" methodname="StageTestsWithEnumeratorPasses" classname="StageTests" runstate="Runnable" seed="1436930795" result="Passed" start-time="2025-04-20 14:42:14Z" end-time="2025-04-20 14:42:14Z" duration="0.008583" asserts="0">
           <properties>
             <property name="_JOINTYPE" value="UnityCombinatorial" />
           </properties>
