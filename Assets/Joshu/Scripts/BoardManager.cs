@@ -5,13 +5,13 @@ using UnityEngine;
 public class BoardManager : MonoBehaviour
 {
     [SerializeField] private GameObject prefabTile;
-    [SerializeField] private GameObject inner;
-    [SerializeField] private GameObject outer;
-    [SerializeField] private GameObject third;
+    [SerializeField] private GameObject stageInner;
+    [SerializeField] private GameObject stageOuter;
+    [SerializeField] private GameObject stageThird;
 
     public int xSize, ySize;
     public GameObject[,] grid;
-    void Start()
+    public void Start()
     {
         CreateStage();
         //inner.GetComponent<SpriteRenderer>().color = UnityEngine.Color.blue;
@@ -19,15 +19,14 @@ public class BoardManager : MonoBehaviour
 
     private void CreateStage()
     {
-        CreateStageItem(inner , 0 , 0 , UnityEngine.Color.red);
-        CreateStageItem(outer , 0 , 0 , UnityEngine.Color.blue);
-        CreateStageItem(third, 0, 0, UnityEngine.Color.yellow);
-
+        CreateStageItem(stageInner, 0, 0, UnityEngine.Color.red);
+        CreateStageItem(stageOuter, 0, 0, UnityEngine.Color.blue);
+        CreateStageItem(stageThird, 0, 0, UnityEngine.Color.yellow);
     }
 
-    private void CreateStageItem(GameObject obj , int x , int y , UnityEngine.Color colour)
+    private void CreateStageItem(GameObject obj, int x, int y, UnityEngine.Color colour)
     {
-        Vector2 stageStartPos = new Vector2(x , y);
+        Vector2 stageStartPos = new Vector2(x, y);
         GameObject stageTile = Instantiate(obj);
         stageTile.transform.parent = this.transform;
         stageTile.transform.position = new Vector2(stageStartPos.x, stageStartPos.y);
@@ -59,4 +58,10 @@ public class BoardManager : MonoBehaviour
             }
         }
     }
+
+    public GameObject GetStageInner()
+    {
+        return stageInner;
+    }
+
 }

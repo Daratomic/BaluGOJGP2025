@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Failed(Child)" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2025-04-20 14:19:43Z" end-time="2025-04-20 14:19:43Z" duration="0.0476645">
+  <test-suite type="TestSuite" id="1011" name="Balu - God of Joy (Group Project 2025)" fullname="Balu - God of Joy (Group Project 2025)" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2025-04-20 14:19:43Z" end-time="2025-04-20 14:19:43Z" duration="0.047665" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties />
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1017" name="StageTests.dll" fullname="D:/Unity/BaluGOJGP2025/Library/ScriptAssemblies/StageTests.dll" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2025-04-20 14:19:43Z" end-time="2025-04-20 14:19:43Z" duration="0.031785" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="27432" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1012" name="StageTests" fullname="StageTests" classname="StageTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2025-04-20 14:19:43Z" end-time="2025-04-20 14:19:43Z" duration="0.030915" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1015" name="CreateStage_ShouldInstantiateStageTileAndSetProperties" fullname="StageTests.CreateStage_ShouldInstantiateStageTileAndSetProperties" methodname="CreateStage_ShouldInstantiateStageTileAndSetProperties" classname="StageTests" runstate="Runnable" seed="1655782562" result="Failed" start-time="2025-04-20 14:19:43Z" end-time="2025-04-20 14:19:43Z" duration="0.012337" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[  Expected: RGBA(0.000, 0.000, 1.000, 1.000)
+  But was:  RGBA(1.000, 0.000, 0.000, 1.000)
+]]></message>
+            <stack-trace><![CDATA[at StageTests.CreateStage_ShouldInstantiateStageTileAndSetProperties () [0x0008d] in D:\Unity\BaluGOJGP2025\Assets\StageTests\StageTests.cs:50
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1016" name="GetStageInner_ShouldReturnStageInner" fullname="StageTests.GetStageInner_ShouldReturnStageInner" methodname="GetStageInner_ShouldReturnStageInner" classname="StageTests" runstate="Runnable" seed="394485860" result="Passed" start-time="2025-04-20 14:19:43Z" end-time="2025-04-20 14:19:43Z" duration="0.002193" asserts="0">
+          <properties />
+        </test-case>
+        <test-case id="1013" name="StageTestsSimplePasses" fullname="StageTests.StageTestsSimplePasses" methodname="StageTestsSimplePasses" classname="StageTests" runstate="Runnable" seed="1830373442" result="Passed" start-time="2025-04-20 14:19:43Z" end-time="2025-04-20 14:19:43Z" duration="0.000118" asserts="0">
+          <properties />
+        </test-case>
+        <test-case id="1014" name="StageTestsWithEnumeratorPasses" fullname="StageTests.StageTestsWithEnumeratorPasses" methodname="StageTestsWithEnumeratorPasses" classname="StageTests" runstate="Runnable" seed="1924929475" result="Passed" start-time="2025-04-20 14:19:43Z" end-time="2025-04-20 14:19:43Z" duration="0.008263" asserts="0">
+          <properties>
+            <property name="_JOINTYPE" value="UnityCombinatorial" />
+          </properties>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
