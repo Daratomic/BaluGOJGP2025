@@ -8,7 +8,8 @@ public class ObjectDestroyer : MonoBehaviour
 {
     public GameObject turtles;
     public int CoinsChance;
-    void OnMouseDown()
+    public Inventory inventory;
+    void OnMouseDown(Collider other)
     {
         CoinsChance = Random.Range(1, 101);
         if (CoinsChance > 95)
@@ -18,6 +19,11 @@ public class ObjectDestroyer : MonoBehaviour
         else
         {
             CoinManager.CoinTally += 5;
+        }
+        IInventoryItem item = other.GetComponent<IInventoryItem>();
+        if (item != null)
+        {
+            inventory.AddItem(item);
         }
         GameObject.Destroy(turtles);
     }
