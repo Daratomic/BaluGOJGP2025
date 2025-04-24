@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class CoinTimer : MonoBehaviour
 {
+    public CoinManager manager;
     private float timer = 0f;
     private float DelayAmount = 1.0f;
+
+    private void Start()
+    {
+        manager = GetComponent<CoinManager>();
+    }
 
     void Update()
     {
@@ -13,7 +19,7 @@ public class CoinTimer : MonoBehaviour
         if (timer >= DelayAmount)
         {
             timer = 0f;
-            CoinManager.CoinTally++;
+            manager.addCoin();
         }
     }
 }

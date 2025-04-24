@@ -12,6 +12,7 @@ public class ObjectSpawner : MonoBehaviour
     // Do NOT touch these in inspector
     public List<GameObject> turtlesInGame; // List of turtles currently in game
     public List<GameObject> cornsInGame;
+    public CoinManager manager;
 
     // Update is called once per frame
     void Start()
@@ -25,6 +26,7 @@ public class ObjectSpawner : MonoBehaviour
         GameObject turtleObject = turtles[turtleNumber];
         GameObject turtleList = Instantiate(turtleObject, RandomSpawnPoint().position, Quaternion.identity);
         turtlesInGame.Add(turtleList);
+        turtleList.GetComponent<TurtleManager>().coinManager = manager;
     }
 
     void SpawnCorns()
