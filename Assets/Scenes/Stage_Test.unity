@@ -285,6 +285,16 @@ PolygonCollider2D:
       - {x: 4.0387187, y: 2.7165668}
       - {x: 4.0954523, y: 3.1391733}
   m_UseDelaunayMesh: 0
+--- !u!1 &319721324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1934943581763886454, guid: 22f15483a1e8afd4094c64d5b343beec, type: 3}
+  m_PrefabInstance: {fileID: 1861725150266048971}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &399664092 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3186783723184421640, guid: 898b08098461df449b0a079698735b65, type: 3}
+  m_PrefabInstance: {fileID: 5255845589123339538}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &406090631
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +467,11 @@ PolygonCollider2D:
       - {x: -1.8000001, y: 2.5000002}
       - {x: -1.3333334, y: 2.6666667}
   m_UseDelaunayMesh: 0
+--- !u!1 &593395570 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6045781036957356896, guid: 23f827a706e42714da42b1794fb26bb6, type: 3}
+  m_PrefabInstance: {fileID: 7913408193631772550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &882758966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,6 +1040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2021860392}
   - component: {fileID: 2021860391}
+  - component: {fileID: 2021860393}
   m_Layer: 0
   m_Name: BoardManager
   m_TagString: Untagged
@@ -1065,6 +1081,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2021860393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021860389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c78479f9d5aeb541a71f0ccbe669a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TopRing: {fileID: 319721324}
+  MiddleRing: {fileID: 593395570}
+  BottomRing: {fileID: 399664092}
+  LeftPillar: {fileID: 1105598981}
+  RightPillar: {fileID: 234834206}
+  FirstArch: {fileID: 1769170102}
+  MiddleArch: {fileID: 2106149478}
+  FinalArch: {fileID: 406090631}
 --- !u!1 &2106149478
 GameObject:
   m_ObjectHideFlags: 0

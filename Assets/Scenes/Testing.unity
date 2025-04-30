@@ -13666,8 +13666,8 @@ MonoBehaviour:
   GrassTop: {fileID: 77639766}
   GrassBottom: {fileID: 781037053}
   rainSystem: {fileID: 1773922217}
-  Fog: {fileID: 0}
-  snowSystem: {fileID: 0}
+  Fog: {fileID: 1026599999}
+  snowSystem: {fileID: 2627854}
 --- !u!1 &2102715372
 GameObject:
   m_ObjectHideFlags: 0
