@@ -49,4 +49,6 @@ public class ColourManager : MonoBehaviour
     public static Color nRed = new Color(1.0f, 0.0f, 0.0f);
     public static Color nYellow = new Color(0.99f, 1.0f, 0.7f);
     public static Color mBrown = new Color(0.69f, 0.5f, 0.35f);
+    public static Color[] colours = { gPurple, bRed, blackbirdBlack, cPink, tGreen, hYellow, nOrange, mBlue, cBlue, sGold, bBrown, mLeaf, skyBlue, oOrange, pPurple, gratefulGreen, peacePink, fTeal, roseRed, dNight, sSilver,
+    rubyRed, pPlum, sYellow, bBlue, bGreen, bJoy, mMoss, pianoPink, rainbowRed, dBrown, yYellow, sunsetBlue, blueyBlack, pOrange, mWhite, guitarGreen, fPurple, nRed, nYellow, mBrown};
 }
