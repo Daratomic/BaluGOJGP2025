@@ -31,10 +31,6 @@ public class StageColours : MonoBehaviour
     private PolygonCollider2D mArchCollider;
     private PolygonCollider2D finArchCollider;
 
-    private Color mBlue = new Color(0.0f, 0.36f, 0.77f);
-    private Color cBlue = new Color(0.26f, 0.45f, 0.8f);
-    private Color sGold = new Color(0.84f, 0.62f, 0.05f);
-    private Color cPink = new Color(0.98f, 0.51f, 0.65f);
     private int RandomNumber;
 
     // Start is called before the first frame update
@@ -60,82 +56,82 @@ public class StageColours : MonoBehaviour
 
         RandomNumber = Random.Range(1, 5);
         if (RandomNumber == 1)
-            { tRingRenderer.color = mBlue; }
+            { tRingRenderer.color = ColourManager.mBlue; }
         else if (RandomNumber == 2)
-            { tRingRenderer.color = cBlue;}
+            { tRingRenderer.color = ColourManager.cBlue;}
         else if (RandomNumber == 3)
-            { tRingRenderer.color = sGold;}
+            { tRingRenderer.color = ColourManager.sGold;}
         else
-            {  tRingRenderer.color = cPink;}
+            {  tRingRenderer.color = ColourManager.cPink;}
 
         RandomNumber = Random.Range(1, 5);
         if (RandomNumber == 1)
-            { mRingRenderer.color = mBlue; }
+            { mRingRenderer.color = ColourManager.mBlue; }
         else if (RandomNumber == 2)
-            { mRingRenderer.color = cBlue; }
+            { mRingRenderer.color = ColourManager.cBlue; }
         else if (RandomNumber == 3)
-            { mRingRenderer.color = sGold; }
+            { mRingRenderer.color = ColourManager.sGold; }
         else
-        { mRingRenderer.color = cPink; }
+        { mRingRenderer.color = ColourManager.cPink; }
 
         RandomNumber = Random.Range(1, 5);
         if (RandomNumber == 1)
-            { bRingRenderer.color = mBlue; }
+            { bRingRenderer.color = ColourManager.mBlue; }
         else if (RandomNumber == 2)
-            { bRingRenderer.color = cBlue; }
+            { bRingRenderer.color = ColourManager.cBlue; }
         else if (RandomNumber == 3)
-            { bRingRenderer.color = sGold; }
+            { bRingRenderer.color = ColourManager.sGold; }
         else
-        { bRingRenderer.color = cPink; }
+        { bRingRenderer.color = ColourManager.cPink; }
 
         RandomNumber = Random.Range(1, 5);
         if (RandomNumber == 1)
-            { lPillarRenderer.color = mBlue; }
+            { lPillarRenderer.color = ColourManager.mBlue; }
         else if (RandomNumber == 2)
-            { lPillarRenderer.color = cBlue; }
+            { lPillarRenderer.color = ColourManager.cBlue; }
         else if (RandomNumber == 3)
-            { lPillarRenderer.color = sGold; }
+            { lPillarRenderer.color = ColourManager.sGold; }
         else
-        { lPillarRenderer.color = cPink; }
+        { lPillarRenderer.color = ColourManager.cPink; }
 
         RandomNumber = Random.Range(1, 5);
         if (RandomNumber == 1)
-            { rPillarRenderer.color = mBlue; }
+            { rPillarRenderer.color = ColourManager.mBlue; }
         else if (RandomNumber == 2)
-            { rPillarRenderer.color = cBlue; }
+            { rPillarRenderer.color = ColourManager.cBlue; }
         else if (RandomNumber == 3)
-            { rPillarRenderer.color = sGold; }
+            { rPillarRenderer.color = ColourManager.sGold; }
         else
-        { rPillarRenderer.color = cPink; }
+        { rPillarRenderer.color = ColourManager.cPink; }
 
         RandomNumber = Random.Range(1, 5);
         if (RandomNumber == 1)
-            { firArchRenderer.color = mBlue; }
+            { firArchRenderer.color = ColourManager.mBlue; }
         else if (RandomNumber == 2)
-            { firArchRenderer.color = cBlue; }
+            { firArchRenderer.color = ColourManager.cBlue; }
         else if (RandomNumber == 3)
-            { firArchRenderer.color = sGold; }
+            { firArchRenderer.color = ColourManager.sGold; }
         else
-        { firArchRenderer.color = cPink; }
+        { firArchRenderer.color = ColourManager.cPink; }
 
         RandomNumber = Random.Range(1, 5);
         if (RandomNumber == 1)
-            { mArchRenderer.color = mBlue; }
+            { mArchRenderer.color = ColourManager.mBlue; }
         else if (RandomNumber == 2)
-            { mArchRenderer.color = cBlue; }
+            { mArchRenderer.color = ColourManager.cBlue; }
         else if (RandomNumber == 3)
-            { mArchRenderer.color = sGold; }
+            { mArchRenderer.color = ColourManager.sGold; }
         else
-        { mArchRenderer.color = cPink; }
+        { mArchRenderer.color = ColourManager.cPink; }
 
         RandomNumber = Random.Range(1, 5);
         if (RandomNumber == 1)
-            { finArchRenderer.color = mBlue; }
+            { finArchRenderer.color = ColourManager.mBlue; }
         else if (RandomNumber == 2)
-            { finArchRenderer.color = cBlue; }
+            { finArchRenderer.color = ColourManager.cBlue; }
         else if (RandomNumber == 3)
-            { finArchRenderer.color = sGold; }
+            { finArchRenderer.color = ColourManager.sGold; }
         else
-        { finArchRenderer.color = cPink; }
+        { finArchRenderer.color = ColourManager.cPink; }
     }
 }
