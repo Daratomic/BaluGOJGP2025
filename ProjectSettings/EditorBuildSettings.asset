@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Testing.unity
-    guid: 8fb33133e6098004aace2e7172077254
+    path: Assets/Scenes/Testing/Riverbank Test.unity
+    guid: 24507bad10114914b91062c72468e9dc
+  - enabled: 1
+    path: Assets/Scenes/ShopScene.unity
+    guid: 4f74cf50d81627d4791da966cf753bd4
   m_configObjects: {}

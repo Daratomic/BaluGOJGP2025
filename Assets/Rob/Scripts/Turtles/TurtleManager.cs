@@ -27,7 +27,7 @@ public class TurtleManager : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
+    private void OnMouseDown()
     {
         int CoinsChance = Random.Range(1, 101);
         if (CoinsChance > 95)
