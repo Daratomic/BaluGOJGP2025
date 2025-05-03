@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Singer
+  m_Name: Musical corn Maraca playing
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: bda78c5333e82cb43bd9e60de0fd1d02, type: 3}
+      value: {fileID: 21300000, guid: da997f11b1cf36544954d1316955a661, type: 3}
     - time: 0.33333334
-      value: {fileID: 21300000, guid: 0bc59b1d6b18b514dbe88077e01b1af3, type: 3}
+      value: {fileID: 21300000, guid: ff5013797618dc64f83fc1328fa50949, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,8 +46,8 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: bda78c5333e82cb43bd9e60de0fd1d02, type: 3}
-    - {fileID: 21300000, guid: 0bc59b1d6b18b514dbe88077e01b1af3, type: 3}
+    - {fileID: 21300000, guid: da997f11b1cf36544954d1316955a661, type: 3}
+    - {fileID: 21300000, guid: ff5013797618dc64f83fc1328fa50949, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
