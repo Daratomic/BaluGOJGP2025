@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class TurtleManager : MonoBehaviour
@@ -38,5 +39,13 @@ public class TurtleManager : MonoBehaviour
         {
             coinManager.addCoins(lowReward);
         }
+        StartCoroutine(Clicked());
+    }
+
+    IEnumerator Clicked()
+    {
+        TurtleClicked.turtleClicked = true;
+        yield return new WaitForSeconds(1);
+        TurtleClicked.turtleClicked = false;
     }
 };

@@ -21,19 +21,19 @@ public class TurtleHearts : MonoBehaviour
         pos = Input.mousePosition;
         pos.z = speed;
         transform.position = Camera.main.ScreenToWorldPoint(pos);
-        if(Input.GetMouseButtonDown(0) && turtleCheck)
+        if(Input.GetMouseButtonDown(0) && TurtleClicked.turtleClicked)
         {
             StartCoroutine(Visibility());
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    /*void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Turtle"))
         {
             turtleCheck = true;
         }
-    }
+    }*/
 
     IEnumerator Visibility()
     {
