@@ -48,15 +48,10 @@ using UnityEngine.UI;
 public class ColourByNumber : MonoBehaviour
 {
     public Color selectedColor = Color.white; // Default color
-<<<<<<< Updated upstream
     public Color[] colors;
     public Button[] colorButtons; // Array of UI buttons
     public List<Color> newColors;
     public bool recurringColor;
-=======
-    public Color[] colors;
-    public Button[] colorButtons;
->>>>>>> Stashed changes
 
     void Start()
     {
@@ -91,7 +86,7 @@ public class ColourByNumber : MonoBehaviour
                 if (sr != null)
                 {
                     Color newColor = new Color(selectedColor.r, selectedColor.g, selectedColor.b, 1f);
-                    sr.color = newColor; //  keep full opacity
+                    sr.color = newColor; // Apply color while keeping full opacity
 
                     Debug.Log($"Changed {hit.collider.name} to {sr.color}");
                 }
@@ -106,7 +101,6 @@ public class ColourByNumber : MonoBehaviour
         {
             if (i < colors.Length)
             {
-<<<<<<< Updated upstream
                 int ran = Random.Range(0, colors.Length);
                 Color colorWithAlpha = new Color(colors[ran].r, colors[ran].g, colors[ran].b, 1f); // Ensure alpha is 1
                 if(newColors.Contains(colorWithAlpha))
@@ -122,9 +116,6 @@ public class ColourByNumber : MonoBehaviour
                     }
                 }
                 newColors.Add(colorWithAlpha);
-=======
-                Color colorWithAlpha = new Color(colors[i].r, colors[i].g, colors[i].b, 1f); // ensure alpha is 1
->>>>>>> Stashed changes
                 ColorBlock cb = colorButtons[i].colors;
                 cb.normalColor = colorWithAlpha;
                 cb.highlightedColor = colorWithAlpha;
