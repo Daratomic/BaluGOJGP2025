@@ -50,10 +50,13 @@ public class ColourByNumber : MonoBehaviour
     public Color selectedColor = Color.white; // Default color
     public Color[] colors;
     public Button[] colorButtons; // Array of UI buttons
+    public List<Color> newColors;
+    public bool recurringColor;
 
     void Start()
     {
         colors = ColourManager.colours;
+        recurringColor = false;
         UpdateButtonColors();
     }
 
@@ -64,9 +67,9 @@ public class ColourByNumber : MonoBehaviour
 
     public void SelectColor(int index)
     {
-        if (index >= 0 && index < colors.Length)
+        if (index >= 0 && index < newColors.Count)
         {
-            selectedColor = colors[index];
+            selectedColor = newColors[index];
         }
     }
 
@@ -98,7 +101,21 @@ public class ColourByNumber : MonoBehaviour
         {
             if (i < colors.Length)
             {
-                Color colorWithAlpha = new Color(colors[i].r, colors[i].g, colors[i].b, 1f); // Ensure alpha is 1
+                int ran = Random.Range(0, colors.Length);
+                Color colorWithAlpha = new Color(colors[ran].r, colors[ran].g, colors[ran].b, 1f); // Ensure alpha is 1
+                if(newColors.Contains(colorWithAlpha))
+                {
+                    recurringColor = true;
+                }
+                while (recurringColor)
+                {
+                    colorWithAlpha = new Color(colors[ran].r, colors[ran].g, colors[ran].b, 1f);
+                    if(!newColors.Contains(colorWithAlpha))
+                    {
+                        recurringColor = false;
+                    }
+                }
+                newColors.Add(colorWithAlpha);
                 ColorBlock cb = colorButtons[i].colors;
                 cb.normalColor = colorWithAlpha;
                 cb.highlightedColor = colorWithAlpha;

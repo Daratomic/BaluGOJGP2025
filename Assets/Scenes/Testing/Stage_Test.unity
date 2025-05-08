@@ -2895,14 +2895,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedColor: {r: 1, g: 1, b: 1, a: 1}
-  colors:
-  - {r: 1, g: 0.039559267, b: 0, a: 0}
-  - {r: 0.14772677, g: 1, b: 0, a: 0}
-  - {r: 0, g: 1, b: 0.98883367, a: 0}
-  - {r: 0.16509432, g: 0.3527653, b: 1, a: 0}
-  - {r: 1, g: 0, b: 0.8291087, a: 0}
-  - {r: 0.92176676, g: 1, b: 0, a: 0}
-  colorButtons: []
+  colors: []
+  colorButtons:
+  - {fileID: 1476895594}
+  - {fileID: 1917808986}
+  - {fileID: 33001970}
+  - {fileID: 1003586198}
+  - {fileID: 915546245}
+  - {fileID: 716705828}
+  newColors: []
+  recurringColor: 0
 --- !u!114 &1867782715
 MonoBehaviour:
   m_ObjectHideFlags: 0
