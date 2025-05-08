@@ -54,7 +54,7 @@ public class StageColours : MonoBehaviour
         mArchCollider = MiddleArch.GetComponent<PolygonCollider2D>();
         finArchCollider = FinalArch.GetComponent<PolygonCollider2D>();
 
-        RandomNumber = Random.Range(1, 5);
+        /*RandomNumber = Random.Range(1, 5);
         if (RandomNumber == 1)
             { tRingRenderer.color = ColourManager.mBlue; }
         else if (RandomNumber == 2)
@@ -132,6 +132,6 @@ public class StageColours : MonoBehaviour
         else if (RandomNumber == 3)
             { finArchRenderer.color = ColourManager.sGold; }
         else
-        { finArchRenderer.color = ColourManager.cPink; }
+        { finArchRenderer.color = ColourManager.cPink; }*/
     }
 }

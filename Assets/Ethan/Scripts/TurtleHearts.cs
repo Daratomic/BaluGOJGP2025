@@ -8,12 +8,10 @@ public class TurtleHearts : MonoBehaviour
     public float speed = 1f;
 
     public SpriteRenderer spriteRenderer;
-    public bool turtleCheck;
 
     void Start()
     {
         spriteRenderer.enabled = false;
-        turtleCheck = false;
     }
 
     void Update()

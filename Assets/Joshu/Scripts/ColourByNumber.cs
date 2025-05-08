@@ -41,17 +41,19 @@
 //}
 
 
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ColourByNumber : MonoBehaviour
 {
     public Color selectedColor = Color.white; // Default color
-    public Color[] colors;
+    public Color[] colors;
     public Button[] colorButtons; // Array of UI buttons
 
     void Start()
     {
+        colors = ColourManager.colours;
         UpdateButtonColors();
     }
 
