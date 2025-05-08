@@ -355,7 +355,7 @@ Transform:
   m_GameObject: {fileID: 221033680}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.6191, y: -3.2587, z: 0}
+  m_LocalPosition: {x: 1.64, y: -1.39, z: 0}
   m_LocalScale: {x: 0.17451972, y: 0.17451972, z: 0.17451972}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -780,8 +780,8 @@ Transform:
   m_GameObject: {fileID: 428791808}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.17, y: 3.76, z: 0}
-  m_LocalScale: {x: 0.1328897, y: 0.1328897, z: 0.1328897}
+  m_LocalPosition: {x: 6.46, y: -0.38, z: 0}
+  m_LocalScale: {x: 0.50118023, y: 0.5565952, z: 0.1328897}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1105,7 +1105,7 @@ Transform:
   m_GameObject: {fileID: 820923970}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.4885, y: 0.35687, z: 0}
+  m_LocalPosition: {x: -0.69, y: -0.82, z: 0}
   m_LocalScale: {x: 0.17772524, y: 0.23687701, z: 0.44982344}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1436,7 +1436,7 @@ Transform:
   m_GameObject: {fileID: 995096062}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.611, y: -1.4387, z: 0}
+  m_LocalPosition: {x: 0.69, y: -0.67, z: 0}
   m_LocalScale: {x: 0.18710239, y: 0.18710239, z: 0.18710239}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1586,6 +1586,10 @@ GameObject:
   - component: {fileID: 1012327486}
   - component: {fileID: 1012327485}
   - component: {fileID: 1012327484}
+<<<<<<< Updated upstream
+=======
+  - component: {fileID: 1012327488}
+>>>>>>> Stashed changes
   - component: {fileID: 1012327487}
   m_Layer: 0
   m_Name: EventSystem
@@ -1653,6 +1657,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1012327483}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
+=======
+  m_Script: {fileID: 11500000, guid: b41954646e2552144b89aa295347b5e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  note: []
+  spawnPoints:
+  - {fileID: 0}
+  timeBetweenSpawns: 0
+  speed: 1
+  target: {x: 48.7, y: 51.07, z: 102.8}
+  notesInGame: []
+--- !u!114 &1012327488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012327483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+>>>>>>> Stashed changes
   m_Script: {fileID: 11500000, guid: 1511ccae7919cfc46b603b9b337fdc94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -2431,7 +2457,7 @@ Transform:
   m_GameObject: {fileID: 1654379810}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.4559, y: 1.9239, z: 0}
+  m_LocalPosition: {x: -1.9, y: -1.43, z: 0}
   m_LocalScale: {x: 0.16979185, y: 0.16979185, z: 0.16979185}
   m_ConstrainProportionsScale: 0
   m_Children: []
