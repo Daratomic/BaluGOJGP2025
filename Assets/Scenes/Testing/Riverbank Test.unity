@@ -7008,6 +7008,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fdf6866e563761459c32aafa8986934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneName: ShopScene
+  SceneKey: 275
 --- !u!1 &1221255341
 GameObject:
   m_ObjectHideFlags: 0
