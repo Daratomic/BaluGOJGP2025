@@ -14,6 +14,7 @@ public class DragAndDrop : MonoBehaviour
         
     private void OnMouseDown()
     {
+        Debug.Log($"Mouse clicked on {gameObject.name}");
         isDragged = true;
         mouseDragStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         spriteDragStartPosition = transform.localPosition;
@@ -35,4 +36,20 @@ public class DragAndDrop : MonoBehaviour
         isDragged = false;
         dragEndedCallBack(this);
     }
+
+    //private void OnMouseUp()
+    //{
+    //    Debug.Log($"Mouse released on {gameObject.name}"); // Debug check
+    //    isDragged = false;
+
+    //    if (dragEndedCallBack != null)
+    //    {
+    //        Debug.Log($"Calling dragEndedCallBack for {gameObject.name}");
+    //        dragEndedCallBack(this);
+    //    }
+    //    else
+    //    {
+    //        Debug.LogError($"dragEndedCallBack is NULL for {gameObject.name}");
+    //    }
+    //}
 }
