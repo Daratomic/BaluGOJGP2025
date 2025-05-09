@@ -55,7 +55,7 @@ public class ColourByNumber : MonoBehaviour
 
     void Start()
     {
-        colors = ColourManager.colours;
+        //colors = ColourManager.colours;
         recurringColor = false;
         UpdateButtonColors();
     }
