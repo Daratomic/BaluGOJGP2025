@@ -39,14 +39,14 @@ public class RandomColours : MonoBehaviour
     public TMP_Text FinalArchColour;
 
     public TMP_Text SuccessText;
-    public bool TopRingComplete;
-    public bool MiddleRingComplete;
-    public bool BottomRingComplete;
-    public bool LeftPillarComplete;
-    public bool RightPillarComplete;
-    public bool FirstArchComplete;
-    public bool MiddleArchComplete;
-    public bool FinalArchComplete;
+    private bool TopRingComplete;
+    private bool MiddleRingComplete;
+    private bool BottomRingComplete;
+    private bool LeftPillarComplete;
+    private bool RightPillarComplete;
+    private bool FirstArchComplete;
+    private bool MiddleArchComplete;
+    private bool FinalArchComplete;
     // Start is called before the first frame update
     void Start()
     {
@@ -210,7 +210,7 @@ public class RandomColours : MonoBehaviour
         }
         else
         {
-            if (BottomRingRenderer.color == color2)
+            if (BottomRingRenderer.color == color6)
             {
                 BottomRingComplete = true;
             }
