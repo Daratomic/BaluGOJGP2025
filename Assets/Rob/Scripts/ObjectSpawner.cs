@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> turtles; // List of turtle prefabs that will be spawned
+    [SerializeField] private List<GameObject> notes; // List of turtle prefabs that will be spawned
     [SerializeField] private List<GameObject> spawnPoints;
     [SerializeField] private int timeBetweenSpawns; // Time it takes for each object to spawn
     
     // Do NOT touch these in inspector
-    public List<GameObject> turtlesInGame; // List of turtles currently in game
+    public List<GameObject> notesInGame; // List of turtles currently in game
     public CoinManager manager;
 
     // Update is called once per frame
@@ -20,10 +20,10 @@ public class ObjectSpawner : MonoBehaviour
 
     void SpawnTurtle()
     {
-        int turtleNumber = Random.Range(0, turtles.Count); // Choose random turtle from list
-        GameObject turtleObject = turtles[turtleNumber];
+        int turtleNumber = Random.Range(0, notes.Count); // Choose random turtle from list
+        GameObject turtleObject = notes[turtleNumber];
         GameObject turtleList = Instantiate(turtleObject, RandomSpawnPoint().position, Quaternion.identity);
-        turtlesInGame.Add(turtleList);
+        notesInGame.Add(turtleList);
         turtleList.GetComponent<TurtleManager>().coinManager = manager;
     }
 
