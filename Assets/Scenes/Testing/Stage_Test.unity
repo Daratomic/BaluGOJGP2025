@@ -5858,10 +5858,18 @@ MonoBehaviour:
   BottomRingColour: {fileID: 2009348640}
   LeftPillarColour: {fileID: 1830982750}
   RightPillarColour: {fileID: 1464368209}
-  FirstArchColour: {fileID: 665481581}
+  FirstArchColour: {fileID: 1085594408}
   MiddleArchColour: {fileID: 376835558}
-  FinalArchColour: {fileID: 1085594408}
+  FinalArchColour: {fileID: 665481581}
   SuccessText: {fileID: 20742803}
+  TopRingComplete: 0
+  MiddleRingComplete: 0
+  BottomRingComplete: 0
+  LeftPillarComplete: 0
+  RightPillarComplete: 0
+  FirstArchComplete: 0
+  MiddleArchComplete: 0
+  FinalArchComplete: 0
 --- !u!1 &1917808984
 GameObject:
   m_ObjectHideFlags: 0
