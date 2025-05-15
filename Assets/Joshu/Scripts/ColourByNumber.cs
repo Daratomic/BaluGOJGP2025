@@ -42,6 +42,7 @@
 
 
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -55,7 +56,8 @@ public class ColourByNumber : MonoBehaviour
 
     void Start()
     {
-        colors = ColourManager.colours;
+        //colors = ColourManager.colours;
+        colors = new Color[] { ColourManager.bRed, ColourManager.blackbirdBlack, ColourManager.cPink, ColourManager.tGreen, ColourManager.hYellow, ColourManager.nOrange };
         recurringColor = false;
         UpdateButtonColors();
     }
@@ -109,6 +111,7 @@ public class ColourByNumber : MonoBehaviour
                 }
                 while (recurringColor)
                 {
+                    ran = Random.Range(0, colors.Length);
                     colorWithAlpha = new Color(colors[ran].r, colors[ran].g, colors[ran].b, 1f);
                     if(!newColors.Contains(colorWithAlpha))
                     {
