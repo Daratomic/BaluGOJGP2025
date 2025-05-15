@@ -56,8 +56,7 @@ public class ColourByNumber : MonoBehaviour
 
     void Start()
     {
-        //colors = ColourManager.colours;
-        colors = new Color[] { ColourManager.bRed, ColourManager.blackbirdBlack, ColourManager.cPink, ColourManager.tGreen, ColourManager.hYellow, ColourManager.nOrange };
+        colors = ColourManager.colours;
         recurringColor = false;
         UpdateButtonColors();
     }
