@@ -4997,7 +4997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1664669049
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5862,14 +5862,6 @@ MonoBehaviour:
   MiddleArchColour: {fileID: 376835558}
   FinalArchColour: {fileID: 665481581}
   SuccessText: {fileID: 20742803}
-  TopRingComplete: 0
-  MiddleRingComplete: 0
-  BottomRingComplete: 0
-  LeftPillarComplete: 0
-  RightPillarComplete: 0
-  FirstArchComplete: 0
-  MiddleArchComplete: 0
-  FinalArchComplete: 0
 --- !u!1 &1917808984
 GameObject:
   m_ObjectHideFlags: 0

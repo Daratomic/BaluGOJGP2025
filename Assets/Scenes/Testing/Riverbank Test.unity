@@ -1680,12 +1680,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca8acd77d9f0d704aa2ae99e13a4b333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turtles:
+  notes:
   - {fileID: 4023025453477304527, guid: 5419dcbf59ca54446a44a8eeedf99e61, type: 3}
   spawnPoints:
   - {fileID: 1541355853}
   timeBetweenSpawns: 3
-  turtlesInGame: []
+  notesInGame: []
   manager: {fileID: 1902752395}
 --- !u!1 &653251647
 GameObject:
