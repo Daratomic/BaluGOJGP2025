@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ColourManager : MonoBehaviour
 {
-    //public static Color gPurple = new Color(0.31f, 0.0f, 0.45f);
+    public static Color gPurple = new Color(0.31f, 0.0f, 0.45f);
     public static Color bRed = new Color(1.0f, 0.13f, 0.3f);
     public static Color blackbirdBlack = new Color(0.0f, 0.0f, 0.0f);
     public static Color cPink = new Color(1.0f, 0.72f, 0.88f);
@@ -15,7 +15,7 @@ public class ColourManager : MonoBehaviour
     public static Color mBlue = new Color(0.15f, 0.12f, 0.7f);
     public static Color cBlue = new Color(0.11f, 0.34f, 0.99f);
     public static Color sGold = new Color(1.0f, 0.7f, 0.17f);
-    /*public static Color bBrown = new Color(0.45f, 0.32f, 0.18f);
+    public static Color bBrown = new Color(0.45f, 0.32f, 0.18f);
     public static Color mLeaf = new Color(0.0f, 1.0f, 0.62f);
     public static Color skyBlue = new Color(0.69f, 0.94f, 0.97f);
     public static Color oOrange = new Color(1.0f, 0.71f, 0.2f);
@@ -49,6 +49,6 @@ public class ColourManager : MonoBehaviour
     public static Color nRed = new Color(1.0f, 0.0f, 0.0f);
     public static Color nYellow = new Color(0.99f, 1.0f, 0.7f);
     public static Color mBrown = new Color(0.69f, 0.5f, 0.35f);
-    public static Color[] colours = { gPurple, bRed, blackbirdBlack, cPink, tGreen, hYellow, nOrange, mBlue, cBlue, sGold, bBrown, mLeaf, skyBlue, oOrange, pPurple, gratefulGreen, peacePink, fTeal, roseRed, dNight, sSilver,
-    rubyRed, pPlum, sYellow, bBlue, bGreen, bJoy, mMoss, pianoPink, rainbowRed, dBrown, yYellow, sunsetBlue, blueyBlack, pOrange, mWhite, guitarGreen, fPurple, nRed, nYellow, mBrown};*/
+    public static Color[] colours = new Color[] { gPurple, bRed, blackbirdBlack, cPink, tGreen, hYellow, nOrange, mBlue, cBlue, sGold, bBrown, mLeaf, skyBlue, oOrange, pPurple, gratefulGreen, peacePink, fTeal, roseRed, dNight, sSilver,
+    rubyRed, pPlum, sYellow, bBlue, bGreen, bJoy, mMoss, pianoPink, rainbowRed, dBrown, yYellow, sunsetBlue, blueyBlack, pOrange, mWhite, guitarGreen, fPurple, nRed, nYellow, mBrown};
 }

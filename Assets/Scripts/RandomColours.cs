@@ -39,16 +39,30 @@ public class RandomColours : MonoBehaviour
     public TMP_Text FinalArchColour;
 
     public TMP_Text SuccessText;
-    private int CompleteColours;
+    private bool TopRingComplete;
+    private bool MiddleRingComplete;
+    private bool BottomRingComplete;
+    private bool LeftPillarComplete;
+    private bool RightPillarComplete;
+    private bool FirstArchComplete;
+    private bool MiddleArchComplete;
+    private bool FinalArchComplete;
     // Start is called before the first frame update
     void Start()
     {
-        color1 = button1.GetComponent<Image>().color;
-        color2 = button2.GetComponent<Image>().color;
-        color3 = button3.GetComponent<Image>().color;
-        color4 = button4.GetComponent<Image>().color;
-        color5 = button5.GetComponent<Image>().color;
-        color6 = button6.GetComponent<Image>().color;
+        ColorBlock cb1 = button1.colors;
+        ColorBlock cb2 = button2.colors;
+        ColorBlock cb3 = button3.colors;
+        ColorBlock cb4 = button4.colors;
+        ColorBlock cb5 = button5.colors;
+        ColorBlock cb6 = button6.colors;
+
+        color1 = cb1.normalColor;
+        color2 = cb2.normalColor;
+        color3 = cb3.normalColor;
+        color4 = cb4.normalColor;
+        color5 = cb5.normalColor;
+        color6 = cb6.normalColor;
 
         TopRingColour.text = (Random.Range(1, 7)).ToString();
         MiddleRingColour.text = (Random.Range(1, 7)).ToString();
@@ -59,7 +73,14 @@ public class RandomColours : MonoBehaviour
         MiddleArchColour.text = (Random.Range(1, 7)).ToString();
         FinalArchColour.text = (Random.Range(1, 7)).ToString();
 
-        CompleteColours = 0;
+        TopRingComplete = false;
+        MiddleRingComplete = false;
+        BottomRingComplete = false;
+        LeftPillarComplete = false;
+        RightPillarComplete = false;
+        FirstArchComplete = false;
+        MiddleArchComplete = false;
+        FinalArchComplete = false;
         SuccessText.text = "";
     }
 
@@ -70,42 +91,42 @@ public class RandomColours : MonoBehaviour
         {
             if (TopRingRenderer.color == color1)
             {
-                CompleteColours++;
+                TopRingComplete = true;
             }
         }
         else if (TopRingColour.text == "2")
         {
             if (TopRingRenderer.color == color2)
             {
-                CompleteColours++;
+                TopRingComplete = true;
             }
         }
         else if (TopRingColour.text == "3")
         {
             if (TopRingRenderer.color == color3)
             {
-                CompleteColours++;
+                TopRingComplete = true;
             }
         }
         else if (TopRingColour.text == "4")
         {
             if (TopRingRenderer.color == color4)
             {
-                CompleteColours++;
+                TopRingComplete = true;
             }
         }
         else if (TopRingColour.text == "5")
         {
             if (TopRingRenderer.color == color5)
             {
-                CompleteColours++;
+                TopRingComplete = true;
             }
         }
         else
         {
             if (TopRingRenderer.color == color6)
             {
-                CompleteColours++;
+                TopRingComplete = true;
             }
         }
 
@@ -113,42 +134,42 @@ public class RandomColours : MonoBehaviour
         {
             if (MiddleRingRenderer.color == color1)
             {
-                CompleteColours++;
+                MiddleRingComplete = true;
             }
         }
         else if (MiddleRingColour.text == "2")
         {
             if (MiddleRingRenderer.color == color2)
             {
-                CompleteColours++;
+                MiddleRingComplete = true;
             }
         }
         else if (MiddleRingColour.text == "3")
         {
             if (MiddleRingRenderer.color == color3)
             {
-                CompleteColours++;
+                MiddleRingComplete = true;
             }
         }
         else if (MiddleRingColour.text == "4")
         {
             if (MiddleRingRenderer.color == color4)
             {
-                CompleteColours++;
+                MiddleRingComplete = true;
             }
         }
         else if (MiddleRingColour.text == "5")
         {
             if (MiddleRingRenderer.color == color5)
             {
-                CompleteColours++;
+                MiddleRingComplete = true;
             }
         }
         else
         {
             if (MiddleRingRenderer.color == color6)
             {
-                CompleteColours++;
+                MiddleRingComplete = true;
             }
         }
 
@@ -156,42 +177,42 @@ public class RandomColours : MonoBehaviour
         {
             if (BottomRingRenderer.color == color1)
             {
-                CompleteColours++;
+                BottomRingComplete = true;
             }
         }
         else if (BottomRingColour.text == "2")
         {
             if (BottomRingRenderer.color == color2)
             {
-                CompleteColours++;
+                BottomRingComplete = true;
             }
         }
         else if (BottomRingColour.text == "3")
         {
             if (BottomRingRenderer.color == color3)
             {
-                CompleteColours++;
+                BottomRingComplete = true;
             }
         }
         else if (BottomRingColour.text == "4")
         {
             if (BottomRingRenderer.color == color4)
             {
-                CompleteColours++;
+                BottomRingComplete = true;
             }
         }
         else if (BottomRingColour.text == "5")
         {
             if (BottomRingRenderer.color == color5)
             {
-                CompleteColours++;
+                BottomRingComplete = true;
             }
         }
         else
         {
-            if (BottomRingRenderer.color == color2)
+            if (BottomRingRenderer.color == color6)
             {
-                CompleteColours++;
+                BottomRingComplete = true;
             }
         }
 
@@ -199,42 +220,42 @@ public class RandomColours : MonoBehaviour
         {
             if (LeftPillarRenderer.color == color1)
             {
-                CompleteColours++;
+                LeftPillarComplete = true;
             }
         }
         else if (LeftPillarColour.text == "2")
         {
             if (LeftPillarRenderer.color == color2)
             {
-                CompleteColours++;
+                LeftPillarComplete = true;
             }
         }
         else if (LeftPillarColour.text == "3")
         {
             if (LeftPillarRenderer.color == color3)
             {
-                CompleteColours++;
+                LeftPillarComplete = true;
             }
         }
         else if (LeftPillarColour.text == "4")
         {
             if (LeftPillarRenderer.color == color4)
             {
-                CompleteColours++;
+                LeftPillarComplete = true;
             }
         }
         else if (LeftPillarColour.text == "5")
         {
             if (LeftPillarRenderer.color == color5)
             {
-                CompleteColours++;
+                LeftPillarComplete = true;
             }
         }
         else
         {
             if (LeftPillarRenderer.color == color6)
             {
-                CompleteColours++;
+                LeftPillarComplete = true;
             }
         }
 
@@ -242,42 +263,42 @@ public class RandomColours : MonoBehaviour
         {
             if (RightPillarRenderer.color == color1)
             {
-                CompleteColours++;
+                RightPillarComplete = true;
             }
         }
         else if (RightPillarColour.text == "2")
         {
             if (RightPillarRenderer.color == color2)
             {
-                CompleteColours++;
+                RightPillarComplete = true;
             }
         }
         else if (RightPillarColour.text == "3")
         {
             if (RightPillarRenderer.color == color3)
             {
-                CompleteColours++;
+                RightPillarComplete = true;
             }
         }
         else if (RightPillarColour.text == "4")
         {
             if (RightPillarRenderer.color == color4)
             {
-                CompleteColours++;
+                RightPillarComplete = true;
             }
         }
         else if (RightPillarColour.text == "5")
         {
             if (RightPillarRenderer.color == color5)
             {
-                CompleteColours++;
+                RightPillarComplete = true;
             }
         }
         else
         {
             if (RightPillarRenderer.color == color6)
             {
-                CompleteColours++;
+                RightPillarComplete = true;
             }
         }
 
@@ -285,42 +306,42 @@ public class RandomColours : MonoBehaviour
         {
             if (FirstArchRenderer.color == color1)
             {
-                CompleteColours++;
+                FirstArchComplete = true;
             }
         }
         else if (FirstArchColour.text == "2")
         {
             if (FirstArchRenderer.color == color2)
             {
-                CompleteColours++;
+                FirstArchComplete = true;
             }
         }
         else if (FirstArchColour.text == "3")
         {
             if (FirstArchRenderer.color == color3)
             {
-                CompleteColours++;
+                FirstArchComplete = true;
             }
         }
         else if (FirstArchColour.text == "4")
         {
             if (FirstArchRenderer.color == color4)
             {
-                CompleteColours++;
+                FirstArchComplete = true;
             }
         }
         else if (FirstArchColour.text == "5")
         {
             if (FirstArchRenderer.color == color5)
             {
-                CompleteColours++;
+                FirstArchComplete = true;
             }
         }
         else
         {
             if (FirstArchRenderer.color == color6)
             {
-                CompleteColours++;
+                FirstArchComplete = true;
             }
         }
 
@@ -328,42 +349,42 @@ public class RandomColours : MonoBehaviour
         {
             if (MiddleArchRenderer.color == color1)
             {
-                CompleteColours++;
+                MiddleArchComplete = true;
             }
         }
         else if (MiddleArchColour.text == "2")
         {
             if (MiddleArchRenderer.color == color2)
             {
-                CompleteColours++;
+                MiddleArchComplete = true;
             }
         }
         else if (MiddleArchColour.text == "3")
         {
             if (MiddleArchRenderer.color == color3)
             {
-                CompleteColours++;
+                MiddleArchComplete = true;
             }
         }
         else if (MiddleArchColour.text == "4")
         {
             if (MiddleArchRenderer.color == color4)
             {
-                CompleteColours++;
+                MiddleArchComplete = true;
             }
         }
         else if (MiddleArchColour.text == "5")
         {
             if (MiddleArchRenderer.color == color5)
             {
-                CompleteColours++;
+                MiddleArchComplete = true;
             }
         }
         else
         {
             if (MiddleArchRenderer.color == color6)
             {
-                CompleteColours++;
+                MiddleArchComplete = true;
             }
         }
 
@@ -371,48 +392,52 @@ public class RandomColours : MonoBehaviour
         {
             if (FinalArchRenderer.color == color1)
             {
-                CompleteColours++;
+                FinalArchComplete = true;
             }
         }
         else if (FinalArchColour.text == "2")
         {
             if (FinalArchRenderer.color == color2)
             {
-                CompleteColours++;
+                FinalArchComplete = true;
             }
         }
         else if (FinalArchColour.text == "3")
         {
             if (FinalArchRenderer.color == color3)
             {
-                CompleteColours++;
+                FinalArchComplete = true;
             }
         }
         else if (FinalArchColour.text == "4")
         {
             if (FinalArchRenderer.color == color4)
             {
-                CompleteColours++;
+                FinalArchComplete = true;
             }
         }
         else if (FinalArchColour.text == "5")
         {
             if (FinalArchRenderer.color == color5)
             {
-                CompleteColours++;
+                FinalArchComplete = true;
             }
         }
         else
         {
             if (FinalArchRenderer.color == color6)
             {
-                CompleteColours++;
+                FinalArchComplete = true;
             }
         }
 
-        if (CompleteColours == 6)
+        if (TopRingComplete & MiddleRingComplete & BottomRingComplete & LeftPillarComplete & RightPillarComplete & FirstArchComplete & MiddleArchComplete & FinalArchComplete)
         {
             SuccessText.text = "Success!";
+        }
+        else
+        {
+            SuccessText.text = "";
         }
     }
 }
