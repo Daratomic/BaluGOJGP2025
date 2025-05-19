@@ -296,6 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Panel: {fileID: 763354837}
+  clickSound: {fileID: 8300000, guid: de340560ffdd4c840b096f9720a117ef, type: 3}
 --- !u!114 &165365553
 MonoBehaviour:
   m_ObjectHideFlags: 0
