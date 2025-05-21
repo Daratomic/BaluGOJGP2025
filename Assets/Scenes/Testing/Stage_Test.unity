@@ -1157,6 +1157,7 @@ GameObject:
   - component: {fileID: 428791811}
   - component: {fileID: 428791810}
   - component: {fileID: 428791809}
+  - component: {fileID: 428791812}
   m_Layer: 0
   m_Name: balu 4
   m_TagString: Untagged
@@ -1246,12 +1247,24 @@ Transform:
   m_GameObject: {fileID: 428791808}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.17, y: 3.76, z: 0}
+  m_LocalPosition: {x: 6.56, y: 6.62, z: 0}
   m_LocalScale: {x: 0.1328897, y: 0.1328897, z: 0.1328897}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &428791812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428791808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80622d48318b5a941a5c529731bab270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &444033402
 GameObject:
   m_ObjectHideFlags: 0
@@ -2405,6 +2418,7 @@ GameObject:
   - component: {fileID: 801427194}
   - component: {fileID: 801427193}
   - component: {fileID: 801427192}
+  - component: {fileID: 801427196}
   m_Layer: 5
   m_Name: CompletionButton
   m_TagString: Untagged
@@ -2455,7 +2469,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 801427193}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 801427196}
+        m_TargetAssemblyTypeName: BaluMovement, Assembly-CSharp
+        m_MethodName: ButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &801427193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2514,6 +2540,18 @@ RectTransform:
   m_AnchoredPosition: {x: 1.3, y: 11.3529}
   m_SizeDelta: {x: 218.4569, y: 116.553}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &801427196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801427191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80622d48318b5a941a5c529731bab270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &820923970
 GameObject:
   m_ObjectHideFlags: 0

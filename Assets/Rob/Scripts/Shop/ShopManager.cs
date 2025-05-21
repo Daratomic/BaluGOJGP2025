@@ -37,7 +37,8 @@ public class ShopManager : MonoBehaviour
 
     private void OnEnable()
     {
-        totalCoins.SetText(bank.BankAmount.ToString());
+        //totalCoins.SetText(bank.BankAmount.ToString());
+        totalCoins.SetText(ShopVariables.BankedCoins.ToString());
     }
 
     public void OnBuy(string itemName)
@@ -55,13 +56,15 @@ public class ShopManager : MonoBehaviour
 
         if (item == null) return;
 
-        if(bank.CanAfford(item.cost))
+        //if(bank.CanAfford(item.cost))
+        if(ShopVariables.BankedCoins >= item.cost)
         {
             int invSlot = inventory.FindFreeSlot();
 
             if (invSlot == -1) return;
 
-            bank.SpendCoins(item.cost);
+            //bank.SpendCoins(item.cost);
+            ShopVariables.BankedCoins -= item.cost;
 
             inventory.AddItem(item, invSlot);
 

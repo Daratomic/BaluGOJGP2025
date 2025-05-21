@@ -3176,9 +3176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf8f118305c28a48a6453ad255460a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 2094202546}
+  manager: {fileID: 0}
   totalCoins: {fileID: 1541361025}
-  _bankAmount: 0
 --- !u!114 &2094202545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3186,12 +3185,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094202543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 540fa5ff9ea24494a8e2fed5e4000d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 2094202546}
 --- !u!114 &2094202546
 MonoBehaviour:
   m_ObjectHideFlags: 0

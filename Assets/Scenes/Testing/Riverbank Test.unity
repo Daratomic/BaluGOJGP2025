@@ -12415,6 +12415,7 @@ GameObject:
   - component: {fileID: 1151743764}
   - component: {fileID: 1151743763}
   - component: {fileID: 1151743762}
+  - component: {fileID: 1151743765}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -12496,6 +12497,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1151743765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151743761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cde1e4aafe511c4c8688f6f2ea68c0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: 0
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.23710771
+      outSlope: 0.23710771
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.21029556
+      value: 0.049862698
+      inSlope: -0.0069149807
+      outSlope: -0.0069149807
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.40964353
+      value: -0.00016121566
+      inSlope: 0.0019143217
+      outSlope: 0.0019143217
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.19675839
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0.00027308188
+      outSlope: 0.00027308188
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  duration: 1
 --- !u!1 &1182880967
 GameObject:
   m_ObjectHideFlags: 0
@@ -13746,7 +13803,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 1902752395}
   totalCoins: {fileID: 1346167092}
-  _bankAmount: 0
 --- !u!114 &1902752394
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,8 +8,13 @@ public class PiggyBank : MonoBehaviour
 {
     public CoinManager manager;
     public TMP_Text totalCoins;
-    [SerializeField]
-    private int _bankAmount;
+    //[SerializeField]
+    //private int _bankAmount;
+
+    public void Start()
+    {
+        totalCoins.SetText(ShopVariables.BankedCoins.ToString());
+    }
 
     public int BankAmount
     {
@@ -18,19 +23,19 @@ public class PiggyBank : MonoBehaviour
 
     public void AddCoinsToBank()
     {
-        _bankAmount += manager.getTotal();
+        ShopVariables.BankedCoins += manager.getTotal();
         manager.resetTotal();
-        totalCoins.SetText(_bankAmount.ToString());
+        totalCoins.SetText(ShopVariables.BankedCoins.ToString());
     }
 
     public bool CanAfford(int amount)
     {
-        return _bankAmount - amount >= 0;
+        return ShopVariables.BankedCoins - amount >= 0;
     }
 
     public void SpendCoins(int amount)
     {
-        _bankAmount -= amount;
-        totalCoins.SetText(_bankAmount.ToString());
+        ShopVariables.BankedCoins -= amount;
+        totalCoins.SetText(ShopVariables.BankedCoins.ToString());
     }
 }
