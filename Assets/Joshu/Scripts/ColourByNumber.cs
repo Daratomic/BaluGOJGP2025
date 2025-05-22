@@ -42,6 +42,7 @@
 
 
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
@@ -53,12 +54,16 @@ public class ColourByNumber : MonoBehaviour
     public Button[] colorButtons; // Array of UI buttons
     public List<Color> newColors;
     public bool recurringColor;
+    public GameObject selectedColourObject;
+    private Image scoImage;
 
     void Start()
     {
         colors = ColourManager.colours;
         recurringColor = false;
         UpdateButtonColors();
+
+        scoImage = selectedColourObject.GetComponent<Image>();
     }
 
     public void SetColor(Color newColor)
@@ -93,6 +98,8 @@ public class ColourByNumber : MonoBehaviour
                 }
             }
         }
+
+        scoImage.color = selectedColor;
     }
 
 
