@@ -8,8 +8,7 @@ public class PiggyBank : MonoBehaviour
 {
     public CoinManager manager;
     public TMP_Text totalCoins;
-    //[SerializeField]
-    //private int _bankAmount;
+    public AudioSource piggyBankAudio; // Reference to audio source
 
     public void Start()
     {
@@ -38,4 +37,16 @@ public class PiggyBank : MonoBehaviour
         ShopVariables.BankedCoins -= amount;
         totalCoins.SetText(ShopVariables.BankedCoins.ToString());
     }
+
+    // Call this when the piggy bank is clicked
+    public void OnPiggyBankClicked()
+    {
+        if (piggyBankAudio != null)
+        {
+            piggyBankAudio.Play();
+        }
+
+        // Optionally call AddCoinsToBank() or other logic here
+    }
 }
+
