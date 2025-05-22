@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
+//using UnityEngine.UIElements;
+using UnityEngine.UI;
+using static UnityEngine.GraphicsBuffer;
 
 public class NoteSpawner : MonoBehaviour
 {
     [SerializeField] private List<GameObject> notes; // List of notes prefabs that will be spawned
     [SerializeField] private List<GameObject> spawnPoints;
-    [SerializeField] private int timeBetweenSpawns; // Time it takes for each object to spawn
+    [SerializeField] private float timeBetweenSpawns; // Time it takes for each object to spawn
     [SerializeField] public Transform targetLocation;
-    public Slider progressBar; // Reference to the UI progress bar
-    public float progressIncrease = 0.1f; // Amount to increase the bar
+    [SerializeField] public Slider progressBar; // Reference to the UI progress bar
+    [SerializeField] public float progressIncrease = 0.1f; // Amount to increase the bar
+    [SerializeField] public Button startButton;
+    [SerializeField] public float movementSpeed = 0.1f;
 
     // Do NOT touch these in inspector
     public List<GameObject> notesInGame; // List of notes currently in game
@@ -19,7 +23,7 @@ public class NoteSpawner : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        StartCoroutine(BeginSpawner());
+      
     }
 
     private void Update()
@@ -34,8 +38,16 @@ public class NoteSpawner : MonoBehaviour
             }
 
             // Destroy the object
-            Destroy(gameObject);
+
+
         }
+        MoveGameObject();
+    }
+    void MoveGameObject()
+
+    {
+        float step = movementSpeed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, targetLocation.position, step);
     }
 
     void SpawnNote()
@@ -44,7 +56,8 @@ public class NoteSpawner : MonoBehaviour
         GameObject noteObject = notes[noteNumber];
         GameObject noteList = Instantiate(noteObject, RandomSpawnPoint().position, Quaternion.identity);
         notesInGame.Add(noteList);
-        
+
+        noteList.GetComponent<NoteMovement>().targetLocation = targetLocation;
     }
 
     Transform RandomSpawnPoint()
@@ -66,9 +79,19 @@ public class NoteSpawner : MonoBehaviour
 
     IEnumerator BeginSpawner()
     {
-        yield return new WaitForSeconds(4f);
+
+
+        yield return new WaitForSeconds(5f);
         StartCoroutine(Spawner());
     }
 
+    public void OnButtonClick()
+    {
 
+        StartCoroutine(Spawner());
+        startButton.gameObject.SetActive(false);
+
+    }
+
+    
 }
