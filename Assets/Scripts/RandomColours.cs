@@ -93,20 +93,12 @@ public class RandomColours : MonoBehaviour
             {
                 TopRingComplete = true;
             }
-            else
-            {
-                TopRingComplete = false;
-            }
         }
         else if (TopRingColour.text == "2")
         {
             if (TopRingRenderer.color == color2)
             {
                 TopRingComplete = true;
-            }
-            else
-            {
-                TopRingComplete = false;
             }
         }
         else if (TopRingColour.text == "3")
@@ -115,20 +107,12 @@ public class RandomColours : MonoBehaviour
             {
                 TopRingComplete = true;
             }
-            else
-            {
-                TopRingComplete = false;
-            }
         }
         else if (TopRingColour.text == "4")
         {
             if (TopRingRenderer.color == color4)
             {
                 TopRingComplete = true;
-            }
-            else
-            {
-                TopRingComplete = false;
             }
         }
         else if (TopRingColour.text == "5")
@@ -137,20 +121,12 @@ public class RandomColours : MonoBehaviour
             {
                 TopRingComplete = true;
             }
-            else
-            {
-                TopRingComplete = false;
-            }
         }
         else
         {
             if (TopRingRenderer.color == color6)
             {
                 TopRingComplete = true;
-            }
-            else
-            {
-                TopRingComplete = false;
             }
         }
 
@@ -160,20 +136,12 @@ public class RandomColours : MonoBehaviour
             {
                 MiddleRingComplete = true;
             }
-            else
-            {
-                MiddleRingComplete = false;
-            }
         }
         else if (MiddleRingColour.text == "2")
         {
             if (MiddleRingRenderer.color == color2)
             {
                 MiddleRingComplete = true;
-            }
-            else
-            {
-                MiddleRingComplete = false;
             }
         }
         else if (MiddleRingColour.text == "3")
@@ -182,20 +150,12 @@ public class RandomColours : MonoBehaviour
             {
                 MiddleRingComplete = true;
             }
-            else
-            {
-                MiddleRingComplete = false;
-            }
         }
         else if (MiddleRingColour.text == "4")
         {
             if (MiddleRingRenderer.color == color4)
             {
                 MiddleRingComplete = true;
-            }
-            else
-            {
-                MiddleRingComplete = false;
             }
         }
         else if (MiddleRingColour.text == "5")
@@ -204,20 +164,12 @@ public class RandomColours : MonoBehaviour
             {
                 MiddleRingComplete = true;
             }
-            else
-            {
-                MiddleRingComplete = false;
-            }
         }
         else
         {
             if (MiddleRingRenderer.color == color6)
             {
                 MiddleRingComplete = true;
-            }
-            else
-            {
-                MiddleRingComplete = false;
             }
         }
 
@@ -227,20 +179,12 @@ public class RandomColours : MonoBehaviour
             {
                 BottomRingComplete = true;
             }
-            else
-            {
-                BottomRingComplete = false;
-            }
         }
         else if (BottomRingColour.text == "2")
         {
             if (BottomRingRenderer.color == color2)
             {
                 BottomRingComplete = true;
-            }
-            else
-            {
-                BottomRingComplete = false;
             }
         }
         else if (BottomRingColour.text == "3")
@@ -249,20 +193,12 @@ public class RandomColours : MonoBehaviour
             {
                 BottomRingComplete = true;
             }
-            else
-            {
-                BottomRingComplete = false;
-            }
         }
         else if (BottomRingColour.text == "4")
         {
             if (BottomRingRenderer.color == color4)
             {
                 BottomRingComplete = true;
-            }
-            else
-            {
-                BottomRingComplete = false;
             }
         }
         else if (BottomRingColour.text == "5")
@@ -271,20 +207,12 @@ public class RandomColours : MonoBehaviour
             {
                 BottomRingComplete = true;
             }
-            else
-            {
-                BottomRingComplete = false;
-            }
         }
         else
         {
             if (BottomRingRenderer.color == color6)
             {
                 BottomRingComplete = true;
-            }
-            else
-            {
-                BottomRingComplete = false;
             }
         }
 
@@ -294,20 +222,12 @@ public class RandomColours : MonoBehaviour
             {
                 LeftPillarComplete = true;
             }
-            else
-            {
-                LeftPillarComplete = false;
-            }
         }
         else if (LeftPillarColour.text == "2")
         {
             if (LeftPillarRenderer.color == color2)
             {
                 LeftPillarComplete = true;
-            }
-            else
-            {
-                LeftPillarComplete = false;
             }
         }
         else if (LeftPillarColour.text == "3")
@@ -316,20 +236,12 @@ public class RandomColours : MonoBehaviour
             {
                 LeftPillarComplete = true;
             }
-            else
-            {
-                LeftPillarComplete = false;
-            }
         }
         else if (LeftPillarColour.text == "4")
         {
             if (LeftPillarRenderer.color == color4)
             {
                 LeftPillarComplete = true;
-            }
-            else
-            {
-                LeftPillarComplete = false;
             }
         }
         else if (LeftPillarColour.text == "5")
@@ -338,20 +250,12 @@ public class RandomColours : MonoBehaviour
             {
                 LeftPillarComplete = true;
             }
-            else
-            {
-                LeftPillarComplete = false;
-            }
         }
         else
         {
             if (LeftPillarRenderer.color == color6)
             {
                 LeftPillarComplete = true;
-            }
-            else
-            {
-                LeftPillarComplete = false;
             }
         }
 
@@ -361,20 +265,12 @@ public class RandomColours : MonoBehaviour
             {
                 RightPillarComplete = true;
             }
-            else
-            {
-                RightPillarComplete = false;
-            }
         }
         else if (RightPillarColour.text == "2")
         {
             if (RightPillarRenderer.color == color2)
             {
                 RightPillarComplete = true;
-            }
-            else
-            {
-                RightPillarComplete = false;
             }
         }
         else if (RightPillarColour.text == "3")
@@ -383,20 +279,12 @@ public class RandomColours : MonoBehaviour
             {
                 RightPillarComplete = true;
             }
-            else
-            {
-                RightPillarComplete = false;
-            }
         }
         else if (RightPillarColour.text == "4")
         {
             if (RightPillarRenderer.color == color4)
             {
                 RightPillarComplete = true;
-            }
-            else
-            {
-                RightPillarComplete = false;
             }
         }
         else if (RightPillarColour.text == "5")
@@ -405,20 +293,12 @@ public class RandomColours : MonoBehaviour
             {
                 RightPillarComplete = true;
             }
-            else
-            {
-                RightPillarComplete = false;
-            }
         }
         else
         {
             if (RightPillarRenderer.color == color6)
             {
                 RightPillarComplete = true;
-            }
-            else
-            {
-                RightPillarComplete = false;
             }
         }
 
@@ -428,20 +308,12 @@ public class RandomColours : MonoBehaviour
             {
                 FirstArchComplete = true;
             }
-            else
-            {
-                FirstArchComplete = false;
-            }
         }
         else if (FirstArchColour.text == "2")
         {
             if (FirstArchRenderer.color == color2)
             {
                 FirstArchComplete = true;
-            }
-            else
-            {
-                FirstArchComplete = false;
             }
         }
         else if (FirstArchColour.text == "3")
@@ -450,20 +322,12 @@ public class RandomColours : MonoBehaviour
             {
                 FirstArchComplete = true;
             }
-            else
-            {
-                FirstArchComplete = false;
-            }
         }
         else if (FirstArchColour.text == "4")
         {
             if (FirstArchRenderer.color == color4)
             {
                 FirstArchComplete = true;
-            }
-            else
-            {
-                FirstArchComplete = false;
             }
         }
         else if (FirstArchColour.text == "5")
@@ -472,20 +336,12 @@ public class RandomColours : MonoBehaviour
             {
                 FirstArchComplete = true;
             }
-            else
-            {
-                FirstArchComplete = false;
-            }
         }
         else
         {
             if (FirstArchRenderer.color == color6)
             {
                 FirstArchComplete = true;
-            }
-            else
-            {
-                FirstArchComplete = false;
             }
         }
 
@@ -495,20 +351,12 @@ public class RandomColours : MonoBehaviour
             {
                 MiddleArchComplete = true;
             }
-            else
-            {
-                MiddleArchComplete = false;
-            }
         }
         else if (MiddleArchColour.text == "2")
         {
             if (MiddleArchRenderer.color == color2)
             {
                 MiddleArchComplete = true;
-            }
-            else
-            {
-                MiddleArchComplete = false;
             }
         }
         else if (MiddleArchColour.text == "3")
@@ -517,20 +365,12 @@ public class RandomColours : MonoBehaviour
             {
                 MiddleArchComplete = true;
             }
-            else
-            {
-                MiddleArchComplete = false;
-            }
         }
         else if (MiddleArchColour.text == "4")
         {
             if (MiddleArchRenderer.color == color4)
             {
                 MiddleArchComplete = true;
-            }
-            else
-            {
-                MiddleArchComplete = false;
             }
         }
         else if (MiddleArchColour.text == "5")
@@ -539,20 +379,12 @@ public class RandomColours : MonoBehaviour
             {
                 MiddleArchComplete = true;
             }
-            else
-            {
-                MiddleArchComplete = false;
-            }
         }
         else
         {
             if (MiddleArchRenderer.color == color6)
             {
                 MiddleArchComplete = true;
-            }
-            else
-            {
-                MiddleArchComplete = false;
             }
         }
 
@@ -562,20 +394,12 @@ public class RandomColours : MonoBehaviour
             {
                 FinalArchComplete = true;
             }
-            else
-            {
-                FinalArchComplete = false;
-            }
         }
         else if (FinalArchColour.text == "2")
         {
             if (FinalArchRenderer.color == color2)
             {
                 FinalArchComplete = true;
-            }
-            else
-            {
-                FinalArchComplete = false;
             }
         }
         else if (FinalArchColour.text == "3")
@@ -584,20 +408,12 @@ public class RandomColours : MonoBehaviour
             {
                 FinalArchComplete = true;
             }
-            else
-            {
-                FinalArchComplete = false;
-            }
         }
         else if (FinalArchColour.text == "4")
         {
             if (FinalArchRenderer.color == color4)
             {
                 FinalArchComplete = true;
-            }
-            else
-            {
-                FinalArchComplete = false;
             }
         }
         else if (FinalArchColour.text == "5")
@@ -606,20 +422,12 @@ public class RandomColours : MonoBehaviour
             {
                 FinalArchComplete = true;
             }
-            else
-            {
-                FinalArchComplete = false;
-            }
         }
         else
         {
             if (FinalArchRenderer.color == color6)
             {
                 FinalArchComplete = true;
-            }
-            else
-            {
-                FinalArchComplete = false;
             }
         }
 
