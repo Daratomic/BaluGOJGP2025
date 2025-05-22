@@ -38,7 +38,7 @@ public class RandomColours : MonoBehaviour
     public TMP_Text MiddleArchColour;
     public TMP_Text FinalArchColour;
 
-    public TMP_Text SuccessText;
+    public ParticleSystem fireworks;
     private bool TopRingComplete;
     private bool MiddleRingComplete;
     private bool BottomRingComplete;
@@ -81,7 +81,7 @@ public class RandomColours : MonoBehaviour
         FirstArchComplete = false;
         MiddleArchComplete = false;
         FinalArchComplete = false;
-        SuccessText.text = "";
+        fireworks.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -625,11 +625,11 @@ public class RandomColours : MonoBehaviour
 
         if (TopRingComplete & MiddleRingComplete & BottomRingComplete & LeftPillarComplete & RightPillarComplete & FirstArchComplete & MiddleArchComplete & FinalArchComplete)
         {
-            SuccessText.text = "Success!";
+            fireworks.gameObject.SetActive(true);
         }
         else
         {
-            SuccessText.text = "";
+            fireworks.gameObject.SetActive(false);
         }
     }
 }
