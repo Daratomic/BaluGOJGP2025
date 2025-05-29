@@ -16,25 +16,22 @@ public class TurtleHearts : MonoBehaviour
 
     void Update()
     {
-        pos = Input.mousePosition;
-        pos.z = speed;
-        transform.position = Camera.main.ScreenToWorldPoint(pos);
+        if(!TurtleClicked.turtleClicked)
+        {
+            pos = Input.mousePosition;
+            pos.z = speed;
+            transform.position = Camera.main.ScreenToWorldPoint(pos);
+        }
+
         if(Input.GetMouseButtonDown(0) && TurtleClicked.turtleClicked)
         {
             StartCoroutine(Visibility());
         }
     }
 
-    /*void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Turtle"))
-        {
-            turtleCheck = true;
-        }
-    }*/
-
     IEnumerator Visibility()
     {
+        transform.position = transform.position;
         spriteRenderer.enabled = true;
         yield return new WaitForSeconds(1);
         spriteRenderer.enabled = false;
