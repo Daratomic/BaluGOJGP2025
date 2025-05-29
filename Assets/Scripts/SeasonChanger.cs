@@ -5,25 +5,23 @@ using UnityEngine;
 
 public class SeasonChanger : MonoBehaviour
 {
-    public GameObject GrassTop;
-    public GameObject GrassBottom;
+    public GameObject Grass;
     private Color Spring = new Color(0.15f, 0.37f, 0.22f);
     private Color Summer = new Color(0.39f, 0.72f, 0.25f);
-    private Color Autumn = new Color(1.0f, 0.71f, 0.2f);
-    private Color Winter = new Color(0.95f, 0.94f, 0.91f);
-    private SpriteRenderer topRenderer;
-    private SpriteRenderer bottomRenderer;
+    private Color Autumn = new Color(1.0f, 1.0f, 1.0f);
+    private SpriteRenderer grassRenderer;
     public ParticleSystem rainSystem;
     public GameObject Fog;
     private SpriteRenderer fogRenderer;
     public ParticleSystem snowSystem;
+    public Sprite RegularColours;
+    public Sprite AutumnColours;
+    public Sprite WinterColours;
     // Start is called before the first frame update
     void Start()
     {
-        topRenderer = GrassTop.GetComponent<SpriteRenderer>();
-        bottomRenderer = GrassBottom.GetComponent<SpriteRenderer>();
-        topRenderer.color = Spring;
-        bottomRenderer.color = Spring;
+        grassRenderer = Grass.GetComponent<SpriteRenderer>();
+        grassRenderer.sprite = RegularColours;
         var rainEmission = rainSystem.emission;
         rainEmission.enabled = true;
         fogRenderer = Fog.GetComponent<SpriteRenderer>();
@@ -44,23 +42,21 @@ public class SeasonChanger : MonoBehaviour
             yield return new WaitForSeconds(5);
             rainEmission.enabled = false;
             yield return new WaitForSeconds(5);
-            topRenderer.color = Summer;
-            bottomRenderer.color = Summer;
+            grassRenderer.color = Summer;
             yield return new WaitForSeconds(10);
-            topRenderer.color = Autumn;
-            bottomRenderer.color = Autumn;
+            grassRenderer.sprite = AutumnColours;
+            grassRenderer.color = Autumn;
             fogRenderer.enabled = true;
             yield return new WaitForSeconds(5);
             fogRenderer.enabled = false;
             yield return new WaitForSeconds(5);
-            topRenderer.color = Winter;
-            bottomRenderer.color = Winter;
+            grassRenderer.sprite = WinterColours;
             snowEmission.enabled = true;
             yield return new WaitForSeconds(5);
             snowEmission.enabled = false;
             yield return new WaitForSeconds(5);
-            topRenderer.color = Spring;
-            bottomRenderer.color = Spring;
+            grassRenderer.sprite = RegularColours;
+            grassRenderer.color = Spring;
             rainEmission.enabled = true;
         }
     }
