@@ -11164,7 +11164,7 @@ Transform:
   m_GameObject: {fileID: 428791808}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.87, y: 2.3, z: 0}
+  m_LocalPosition: {x: 6.92, y: 6.28, z: 0}
   m_LocalScale: {x: 0.1328897, y: 0.1328897, z: 0.1328897}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21665,7 +21665,7 @@ MonoBehaviour:
   FirstArchColour: {fileID: 1085594408}
   MiddleArchColour: {fileID: 376835558}
   FinalArchColour: {fileID: 665481581}
-  SuccessText: {fileID: 20742803}
+  fireworks: {fileID: 289994330}
 --- !u!1 &1917808984
 GameObject:
   m_ObjectHideFlags: 0
@@ -22200,6 +22200,7 @@ MonoBehaviour:
   progressBar: {fileID: 0}
   progressIncrease: 0.1
   startButton: {fileID: 801427192}
+  movementSpeed: 0.1
   notesInGame: []
 --- !u!1 &2043060029
 GameObject:
